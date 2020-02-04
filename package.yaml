@@ -21,9 +21,16 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- hspec
+- QuickCheck
+
+# default-extensions:
+# - FlexibleContexts
 
 library:
   source-dirs: src
+  ghc-options:
+  - -Wall
 
 executables:
   LearningHaskell-exe:
@@ -38,7 +45,7 @@ executables:
 
 tests:
   LearningHaskell-test:
-    main:                Spec.hs
+    main: SortSpec.hs
     source-dirs:         test
     ghc-options:
     - -threaded
