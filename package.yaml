@@ -24,8 +24,8 @@ dependencies:
 - hspec
 - QuickCheck
 
-# default-extensions:
-# - FlexibleContexts
+default-extensions:
+- RankNTypes
 
 library:
   source-dirs: src
@@ -45,7 +45,7 @@ executables:
 
 tests:
   LearningHaskell-test:
-    main: SortSpec.hs
+    main: Spec.hs
     source-dirs:         test
     ghc-options:
     - -threaded
